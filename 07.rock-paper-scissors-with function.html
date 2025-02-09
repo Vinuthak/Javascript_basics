@@ -4,22 +4,20 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <button onclick="
-      playGame('rock');
-      ">Rock
-    </button>
-    <button onclick="
-      playGame('paper');
-      ">Paper
-    </button>
-    <button onclick="
-      playGame('scissors');
-      ">Scissors
-    </button>
+    <p>Rock Paper Scissors</p>
+
+    <button onclick="playGame('rock');">Rock</button>
+
+    <button onclick="playGame('paper');">Paper</button>
+
+    <button onclick="playGame('scissors');">Scissors</button>
+
     <script>
-      let result = '';
       function playGame(playerMove){
+
         const computerMove = pickComputerMove();
+        let result = '';
+        
           if(computerMove === 'rock'){
             result = 'You loose';
           }else if(computerMove === 'paper'){
