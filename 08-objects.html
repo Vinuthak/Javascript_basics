@@ -21,7 +21,14 @@
       */
      const product2 = {
       name: 'vinu',
-      married: ''
+      married: '',
+      kids_names: {
+        nivin: 8,
+        nirvan: 3
+      },
+      fun: function function1(){
+        console.log("Inside a function");
+      }
      };
      console.log(product2['height'] = '5.4');
      console.log(product2);
@@ -29,6 +36,15 @@
      console.log(product2);
      product2["kids"] = 2;
      console.log(product2);
+     console.log(product2.kids_names.nivin);
+     console.log(product2['kids_names']['nirvan']);
+     console.log(product2.fun);
+     console.log(product2.fun());
+     console.log(typeof console['log']);
+     console.log(JSON.stringify(product2));
+     console.log(JSON.stringify(product2));
+     const jsonString = JSON.stringify(product2)
+     console.log(JSON.parse(jsonString));
     </script>
   </body>   
 </html> 
