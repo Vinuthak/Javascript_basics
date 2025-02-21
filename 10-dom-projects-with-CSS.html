@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+  <style>
+    body{
+      font-family: Arial;
+      padding-bottom: 110px;
+    }
+    .subscribe-css-button{
+      border: none;
+      color: white;
+      background-color: black;
+      padding: 10px;
+      border-radius: 50px;
+      font-weight: 700;
+      margin-bottom: 35px;
+      cursor: pointer;
+    }
+    .is-subscribed{
+      background-color: rgb(240, 240, 240);
+      color: black;
+    }
+    .cost-input-css{
+      font-size: 15;
+      padding: 12px;
+    }
+    .calculate-button-css{
+      background-color: green;
+      color: white;
+      border: none;
+      font-size: 15px;
+      padding: 12px 15px;
+      cursor: pointer;
+    }
+
+  </style>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="subscribe();
+      " class="js-subscribe-button subscribe-css-button"> 
+    Subscribe  </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input placeholder="Cost of order" class="js-inputElement cost-input-css" onkeydown="handleCostKeydown();
+      
+    ">
+    <button class="calculate-button-css" onclick="calculateTotal()">Calculate</button>
+    <p class="js-total-cost"></p>
+    <script>
+      function handleCostKeydown(){
+        if(event.key === 'Enter'){
+        calculateTotal();
+      }
+      }
+      function calculateTotal(){
+        let cost = Number( document.querySelector('.js-inputElement').value);
+
+        if (cost < 40){
+          cost += 10;
+        }
+        document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+      }
+      function subscribe(){
+        const buttonElement = document.querySelector('.js-subscribe-button');
+        buttonElement.classList.add('is-subscribed');
+        if (buttonElement.innerText === 'Subscribe'){
+          buttonElement.innerHTML = 'Subscribed';
+        }
+        else{
+
+          buttonElement.innerHTML = 'Subscribe';
+          buttonElement.classList.remove('is-subscribed');
+        }
+      }
+      
+    </script>
+  </body>   
+</html> 
+
+
