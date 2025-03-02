@@ -37,10 +37,17 @@
     */
    [
     'make dinner', 'wash dishes', 'watch youtube'
-   ].forEach(function(value,index){
+   ].forEach((value,index) => {
+    if(value === 'wash dishes'){
+      return;
+    }
     console.log(index);
     console.log(value);
    });
+  const oneParam = param => {console.log(param+1);};
+  oneParam(2);
+  const oneLine = param => param+3;
+  console.log(oneLine(2));
   </script>
   </body>   
 </html> 
