@@ -4,7 +4,14 @@
     <title>Advanced Functions</title>
   </head>
   <body>
+    <button onclick="" class="js-button"> Click</button>
     <script>
+      const buttonElement = document.querySelector('.js-button');
+      buttonElement.addEventListener('click',() => {console.log('click')});
+      const eventListener = () => {console.log('enter')};
+      buttonElement.addEventListener('keydown',eventListener);
+      buttonElement.removeEventListener('keydown',eventListener);
+
       /*
       function greeting(){
         console.log('Hello');
@@ -34,11 +41,10 @@
       setInterval(function(){
         //console.log('Interval', 3000 );
       })
-    */
-   [
-    'make dinner', 'wash dishes', 'watch youtube'
-   ].forEach((value,index) => {
-    if(value === 'wash dishes'){
+      [
+        'make dinner', 'wash dishes', 'watch youtube'
+      ].forEach((value,index) => {
+        if(value === 'wash dishes'){
       return;
     }
     console.log(index);
@@ -48,7 +54,13 @@
   oneParam(2);
   const oneLine = param => param+3;
   console.log(oneLine(2));
-  </script>
+  const object2 ={
+    method: () => {
+
+  }
+};
+*/
+</script>
   </body>   
 </html> 
 
