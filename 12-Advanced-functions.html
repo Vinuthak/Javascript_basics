@@ -17,6 +17,14 @@
       ];
       const tallPlayers = footballTeam.filter((value,index) => {return value.height >= 6;});
       console.log(tallPlayers);
+     console.log( [1,2,3].map((value,index) => {return value*2;}));
+
+     const users = [
+        { id: 10, name: 'John' },
+        { id: 21, name: 'Jane' },
+        { id: 35, name: 'Doe' }
+      ];
+      console.log(users.map((user) => {return user.id;}));
       /*
       const buttonElement = document.querySelector('.js-button');
       buttonElement.addEventListener('click',() => {console.log('click')});
