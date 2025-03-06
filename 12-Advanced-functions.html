@@ -6,6 +6,26 @@
   <body>
     <button onclick="" class="js-button"> Click</button>
     <script>
+      function init(){
+        const name = "mozirilla";
+        function displayName(){
+          console.log(name);
+        }
+        
+        displayName();
+      }
+      init();
+      function greet(){
+        const name = "Vinu";
+        function ask(){
+          console.log(name + ",How are You?");
+        }
+         return ask;
+      }
+      console.log(greet());
+      const greeting = greet();
+      greeting();
+      /*
       console.log([1,-3, 5].filter((value,index) => {return value >= 0;}));
 
       const footballTeam = [
@@ -25,7 +45,6 @@
         { id: 35, name: 'Doe' }
       ];
       console.log(users.map((user) => {return user.id;}));
-      /*
       const buttonElement = document.querySelector('.js-button');
       buttonElement.addEventListener('click',() => {console.log('click')});
       const eventListener = () => {console.log('enter')};
